@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>김계림 2314317</title>
+</head>
+<body>
+    <h2>동아리 가입 양식</h1>
+    <form action="/action_page.php">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name">
+        <p></p>
+        <lable for="major">학부/학과</lable>
+        <select id="major" name="major">
+            <option value="소프트웨어학부">소프트웨어학부</option>
+            <option value="생명시스템학부">생명시스템학부</option>
+            <option value="화학과">화학과</option>
+            <option value="한국어문학부">한국어문학부</option>
+        </select>
+        <p>학년
+        <input type="radio" id="freshman" name="grade" value="1학년">
+        <label for="freshman">1학년</label>
+        <input type="radio" id="sophomore" name="grade" value="2학년">
+        <label for="sophomore">2학년</label>
+        <input type="radio" id="junior" name="grade" value="3학년">
+        <label for="junior">3학년</label>
+        <input type="radio" id="senior" name="grade" value="4학년">
+        <label for="ssenior">4학년</label>
+        </p>
+        <label for="stu_num">학번</label>
+        <input type="text" id="stu_num" name="stu_num" pattern="[0-9][7]">
+        <p></p>
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" value="id@host">
+        <p></p>
+        <label for="phone">전화번호</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}">
+        <p></p>
+        <label for="reason">가입동기</label>
+        <textarea for="text" id="reason" name="reason"></textarea>>
+        <p></p>
+        <input type="submit" value="가입하기">
+        <input type="button" value="취소하기">
+    </form>
+</body>
+
+</html>

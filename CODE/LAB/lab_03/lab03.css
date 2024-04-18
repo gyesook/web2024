@@ -1,0 +1,202 @@
+* {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    margin:0px;
+    padding:0px;
+}
+
+#title h1 {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    padding-bottom: 20px;
+}
+
+
+
+
+.all {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.a {
+    display: flex;
+}
+
+#top_header {
+    background-image: url("top_header.png");
+    background-size:cover;
+    background-position: center;
+    height : 125px;
+    display: flex;
+    color:#32BDA5;
+    justify-content: space-between; /*양쪽 끝에 배치하기*/
+    align-items: flex-end;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top:50px;
+    padding-bottom: 10px;
+
+}
+
+a {
+    text-decoration:none;
+    color:#32BDA5;
+}
+
+#navi{
+    display: flex;
+    list-style-type: none;
+ 
+    
+}
+
+#navi li{
+    list-style-type: none;
+}
+
+
+footer {
+    background-image: linear-gradient(to right, #73E2C3, #32BDA5);
+}
+
+
+#foot ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding:10px;
+    margin:10px;
+}
+
+#foot ul li a{
+    color:white;
+}
+
+.login {
+    background-color:white ;
+
+}
+
+#login {
+    padding:10px;
+    color:#32AD91;
+}
+
+.input_id {
+    padding-top:5px;
+    padding-bottom: 9px;
+}
+
+#post {
+    margin:20px;
+    margin-top:10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border:3px solid #32BDA5;
+    padding:20px;
+    padding-top:20px;
+    padding-bottom:25px;
+    box-shadow: 2px 2px 7px #32AD91;
+    margin:10px;
+    margin-right: 0px;
+    border-radius:10px;
+    color:#2D9E84;
+}
+
+.card h3 {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-weight:bord;
+    font-size:200%;
+    margin:10px;
+}
+
+.card p {
+    font-size:15px;
+}
+
+.img_text {
+    display: flex;
+}
+
+img {
+    padding-right: 20px;
+}
+
+.ad_box {
+    border:3px solid #32BDA5;
+    border-radius:10px;
+    margin:10px;
+    margin-left:0px;
+    padding:10px;
+    color:#2D9E84;
+    background-color: white;
+}
+
+.ad_box img {
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+/*메뉴바*/
+
+#navi li {
+    font-size: 20px;
+  }
+
+
+#navi li a{
+    display:block;
+
+}
+
+#navi li:hover > a{
+    background-color: #32BDA5;
+    color:white;
+
+}
+
+#navi ul{
+    position: absolute;
+    background-color: white;
+    color:#32BDA5;
+    text-align: center;
+    opacity:0;
+}
+
+#navi ul a{
+    color:#32BDA5;
+}
+
+#navi ul li{
+    float:none;
+    font-size: 15px;
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+
+#navi li:hover ul{ /*메인메뉴에 마우스 포인터를 가져갔을 때 서브메뉴 스타일*/
+    opacity: 1;
+}
+
+#navi ul li:hover a{ /*서브메뉴 리스트로 마우스 포인터를 올렸을 때 스타일*/
+    background: white;
+    color:#32BDA5;
+}
+
+
+#navi li {
+    width: 180px;
+    text-align: center;
+}
