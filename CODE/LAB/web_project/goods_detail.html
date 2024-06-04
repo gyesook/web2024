@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAKTAVERSE</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="sidebars.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+</head>
+<body>
+    <div id="body_content">
+    <header class="container-fluid text-center">
+        <p style="text-align: right; margin-right:100px; margin-top:5px;" class="login"><a href="login.html">LOGIN</a></p>
+        <a href="waktaverse.html"><img src="img/top_header.png" width="200px" height="200px"></a>
+    </header>
+        <div class="d-flex">
+            <nav class="flex-shrink-0 p-3 bg-white" style="width: 280px;" id="nav">
+                <a href="waktaverse.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                <span class="fs-5 fw-semibold">WAKTAVERSE</span>
+                </a>
+                <ul class="list-unstyled ps-0">
+                <li class="mb-1">
+                    <div class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true"  aria-disabled="true">
+                    우왁굳
+                    </div>
+                    <div class="collapse show" id="home-collapse">
+                    <ul class="nav-pills btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="wak_info.html" class="link rounded">정보</a></li>
+                        <li><a href="goods.html" class="nav-link active link rounded">굿즈</a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true" aria-disabled="true">
+                    고정멤버 & 아카데미
+                    </button>
+                    <div class="collapse show" id="dashboard-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="gomem.html" class="link rounded">고정멤버</a></li>
+                        <li><a href="academy.html" class="link rounded">고정멤버 아카데미</a></li>
+                        <li><a href="academy.html" class="link rounded">고정멤버 노래</a></li>
+                        <li><a href="academy.html" class="link rounded">고정멤버 아카데미 노래</a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="true" aria-disabled="true">
+                    이세계아이돌
+                    </button>
+                    <div class="collapse show" id="orders-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="#" class="link rounded">멤버 소개</a></li>
+                        <li><a href="#" class="link rounded">노래</a></li>
+                    </ul>
+                    </div>
+                </li>
+                </li>
+                </ul>
+            </nav> 
+            <div id="right-content"> 
+                <h1 style="font-size:45px; margin-top:30px; color:#222222; font-weight: bold;">우왁굳즈</h1>
+                <div class="goods_details">
+                <div id="carouselExampleFade" class="carousel slide carousel-dark carousel-fade">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="img/hood1.webp" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/hood1_.webp" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  <div>
+                    <h1 style="font-weight: bold;">Woowakgood Bone Room Hoodie Black</h1>
+                    <h2 style="text-align:right; color:#7e7e7e; margin-bottom: 30px;;">89,700원</h2>
+                    <div class="dropdown">
+                        <button class="sizedrop btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+                          사이즈 선택
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#" onclick="selectSize('S')">S</a></li>
+                          <li><a class="dropdown-item" href="#" onclick="selectSize('M')">M</a></li>
+                          <li><a class="dropdown-item" href="#" onclick="selectSize('L')">L</a></li>
+                          <li><a class="dropdown-item" href="#" onclick="selectSize('XL')">XL</a></li>
+                        </ul>
+                      </div>
+                      <div id="result"></div>
+                    <div class="goods_buttons">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary goodsgg " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        장바구니
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content border-0">
+                            <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">장바구니에 추가되었습니다.</h1>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="xx_button btn" data-bs-dismiss="modal">닫기</button>
+                            <button type="button" class="cart_button btn">장바구니로 이동</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <a  href="goods_buying.html"><button type="button" class="btn btn-primary goodsgg"data-bs-target="#staticBackdrop">
+                        바로구매
+                    </button></a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+        <footer>
+            <div id="foot">
+                <ul>
+                    <li>서울특별시 용산구 청파로47길 100</li>
+                    <li>숙명여자대학교 컴퓨터과학전공 2314317 김계림</li>
+                    <li>TEL | 010-2388-8057&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EMAIL | gyerim@sookmyung.ac.kr</li>
+                </ul>
+            </div>
+        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // 초기 가격 설정 (예: 89,700원)
+        var price = 89700;
+        var selectedItems = {}; // 선택된 아이템을 저장할 객체
+    
+        function selectSize(size) {
+            // 이미 선택된 사이즈인지 확인
+            if (selectedItems[size]) {
+                // 이미 선택된 경우 수량만 증가시키고 업데이트
+                var newQuantity = selectedItems[size].quantity + 1;
+                updateTotal(newQuantity, size);
+            } else {
+                // 새로운 사이즈인 경우 추가
+                updateTotal(1, size);
+            }
+        }
+    
+        // 수량이 변경될 때마다 총 가격 업데이트
+        function updateTotal(quantity, size) {
+            // 총 가격 계산
+            var totalPrice = price * quantity;
+            // 총 가격을 쉼표가 포함된 문자열로 변환
+            var formattedTotalPrice = totalPrice.toLocaleString();
+    
+            // 선택된 아이템 정보 저장
+            selectedItems[size] = {
+                quantity: quantity,
+                totalPrice: totalPrice
+            };
+    
+            // HTML 업데이트
+            var resultHtml = "";
+            for (var key in selectedItems) {
+                if (selectedItems[key].quantity > 0) { // 수량이 0보다 큰 아이템만 표시
+                    resultHtml += `
+                        <hr style="margin-top: 50px; margin-bottom:50px;">
+                        <div class="d-flex justify-content-between">
+                            <div style="font-size:18px;">${key}</div>
+                            <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                    <input type="number" class="form-control" id="quantity" placeholder="수량" value="${selectedItems[key].quantity}" min="1" onchange="updateTotal(this.value, '${key}')">
+                                </div>
+                            </div>
+                            <div style="font-size:18px;">${selectedItems[key].totalPrice.toLocaleString()}원</div>
+                            <button class="btn x_button" onclick="removeItem('${key}')"><i class="bi bi-x-lg"></i></button>
+                        </div>
+                    `;
+                }
+            }
+    
+            document.getElementById("result").innerHTML = resultHtml;
+        }
+    
+        // 아이템 삭제 함수
+        function removeItem(size) {
+            // 수량을 0으로 설정하여 삭제
+            updateTotal(0, size);
+        }
+    </script>
+</body>
+</html>
