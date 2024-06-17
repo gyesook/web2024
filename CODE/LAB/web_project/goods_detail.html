@@ -10,7 +10,6 @@
     <link href="sidebars.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
-</head>
 <body>
     <div id="body_content">
     <header class="container-fluid text-center">
@@ -42,8 +41,8 @@
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="gomem.html" class="link rounded">고정멤버</a></li>
                         <li><a href="academy.html" class="link rounded">고정멤버 아카데미</a></li>
-                        <li><a href="academy.html" class="link rounded">고정멤버 노래</a></li>
-                        <li><a href="academy.html" class="link rounded">고정멤버 아카데미 노래</a></li>
+                        <li><a href="gomem_song.html" class="link rounded">고정멤버 노래</a></li>
+                        <li><a href="academy_song.html" class="link rounded">고정멤버 아카데미 노래</a></li>
                     </ul>
                     </div>
                 </li>
@@ -53,15 +52,15 @@
                     </button>
                     <div class="collapse show" id="orders-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" class="link rounded">멤버 소개</a></li>
-                        <li><a href="#" class="link rounded">노래</a></li>
+                        <li><a href="isd.html" class="link rounded">멤버 소개</a></li>
+                        <li><a href="isd_song.html" class="link rounded">노래</a></li>
                     </ul>
                     </div>
                 </li>
                 </li>
                 </ul>
             </nav> 
-            <div id="right-content"> 
+            <div id="right-content" style="padding-bottom:100px;"> 
                 <h1 style="font-size:45px; margin-top:30px; color:#222222; font-weight: bold;">우왁굳즈</h1>
                 <div class="goods_details">
                 <div id="carouselExampleFade" class="carousel slide carousel-dark carousel-fade">
@@ -97,6 +96,9 @@
                         </ul>
                       </div>
                       <div id="result"></div>
+                      <hr id="totalPriceHr" style="margin-top: 50px; display: none;">
+                    <div id="totalPriceDisplay" style="color:#222222; font-size:25px; font-weight: bold; margin-top: 20px; text-align: right;"></div>
+
                     <div class="goods_buttons">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary goodsgg " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -140,63 +142,125 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        // 초기 가격 설정 (예: 89,700원)
-        var price = 89700;
-        var selectedItems = {}; // 선택된 아이템을 저장할 객체
-    
-        function selectSize(size) {
-            // 이미 선택된 사이즈인지 확인
-            if (selectedItems[size]) {
-                // 이미 선택된 경우 수량만 증가시키고 업데이트
-                var newQuantity = selectedItems[size].quantity + 1;
-                updateTotal(newQuantity, size);
-            } else {
-                // 새로운 사이즈인 경우 추가
-                updateTotal(1, size);
-            }
+    // 초기 가격 설정 (예: 89,700원)
+    var price = 89700;
+    var selectedItems = {}; // 선택된 아이템을 저장할 객체
+
+    function selectSize(size) {
+        // 이미 선택된 사이즈인지 확인
+        if (selectedItems[size]) {
+            // 이미 선택된 경우 수량만 증가시키고 업데이트
+            var newQuantity = selectedItems[size].quantity + 1;
+            updateTotal(newQuantity, size);
+        } else {
+            // 새로운 사이즈인 경우 추가
+            updateTotal(1, size);
         }
-    
-        // 수량이 변경될 때마다 총 가격 업데이트
-        function updateTotal(quantity, size) {
-            // 총 가격 계산
-            var totalPrice = price * quantity;
-            // 총 가격을 쉼표가 포함된 문자열로 변환
-            var formattedTotalPrice = totalPrice.toLocaleString();
-    
-            // 선택된 아이템 정보 저장
-            selectedItems[size] = {
-                quantity: quantity,
-                totalPrice: totalPrice
-            };
-    
-            // HTML 업데이트
-            var resultHtml = "";
-            for (var key in selectedItems) {
-                if (selectedItems[key].quantity > 0) { // 수량이 0보다 큰 아이템만 표시
-                    resultHtml += `
-                        <hr style="margin-top: 50px; margin-bottom:50px;">
-                        <div class="d-flex justify-content-between">
-                            <div style="font-size:18px;">${key}</div>
-                            <div class="d-flex align-items-center">
-                                <div class="ms-3">
-                                    <input type="number" class="form-control" id="quantity" placeholder="수량" value="${selectedItems[key].quantity}" min="1" onchange="updateTotal(this.value, '${key}')">
-                                </div>
+    }
+
+    // 수량이 변경될 때마다 총 가격 업데이트
+    function updateTotal(quantity, size) {
+        // 총 가격 계산
+        var totalPrice = price * quantity;
+        // 총 가격을 쉼표가 포함된 문자열로 변환
+        var formattedTotalPrice = totalPrice.toLocaleString();
+
+        // 선택된 아이템 정보 저장
+        selectedItems[size] = {
+            quantity: quantity,
+            totalPrice: totalPrice
+        };
+
+        // HTML 업데이트
+        var resultHtml = "";
+        for (var key in selectedItems) {
+            if (selectedItems[key].quantity > 0) { // 수량이 0보다 큰 아이템만 표시
+                resultHtml += `
+                    <hr style="margin-top: 50px; margin-bottom:50px;">
+                    <div class="d-flex justify-content-between">
+                        <div style="font-size:18px;">${key}</div>
+                        <div class="d-flex align-items-center">
+                            <div class="ms-3">
+                                <input type="number" class="form-control" id="quantity" placeholder="수량" value="${selectedItems[key].quantity}" min="1" onchange="updateTotal(this.value, '${key}')">
                             </div>
-                            <div style="font-size:18px;">${selectedItems[key].totalPrice.toLocaleString()}원</div>
-                            <button class="btn x_button" onclick="removeItem('${key}')"><i class="bi bi-x-lg"></i></button>
                         </div>
-                    `;
-                }
+                        <div style="font-size:18px;">${selectedItems[key].totalPrice.toLocaleString()}원</div>
+                        <button class="btn x_button" onclick="removeItem('${key}')"><i class="bi bi-x-lg"></i></button>
+                    </div>
+                `;
             }
-    
-            document.getElementById("result").innerHTML = resultHtml;
         }
-    
-        // 아이템 삭제 함수
-        function removeItem(size) {
-            // 수량을 0으로 설정하여 삭제
-            updateTotal(0, size);
+
+        document.getElementById("result").innerHTML = resultHtml;
+        updateTotalPriceDisplay();
+    }
+
+    // 아이템 삭제 함수
+    function removeItem(size) {
+        // 수량을 0으로 설정하여 삭제
+        updateTotal(0, size);
+    }
+
+    // 총 금액 업데이트 함수
+    function updateTotalPriceDisplay() {
+        var total = 0;
+        for (var key in selectedItems) {
+            total += selectedItems[key].totalPrice;
         }
+        document.getElementById("totalPriceDisplay").innerText = `Total ${total.toLocaleString()}원`;
+
+        // 총 금액이 표시될 때만 hr 태그를 보이게 함
+        var totalPriceHr = document.getElementById("totalPriceHr");
+        if (total > 0) {
+            totalPriceHr.style.display = "block";
+        } else {
+            totalPriceHr.style.display = "none";
+        }
+    }
+
+    function selectSize(size) {
+    // 이미 선택된 사이즈인지 확인
+    if (selectedItems[size]) {
+        // 이미 선택된 경우 기존 수량에 1을 더하고 업데이트
+        var newQuantity = selectedItems[size].quantity + 1;
+        updateTotal(newQuantity, size);
+    } else {
+        // 새로운 사이즈인 경우 추가
+        updateTotal(1, size);
+    }
+}
+
+// 수량이 변경될 때마다 총 가격 업데이트
+function updateTotal(quantity, size) {
+    // 선택된 아이템 정보 저장
+    selectedItems[size] = {
+        quantity: parseInt(quantity),
+        totalPrice: price * parseInt(quantity)
+    };
+
+    // HTML 업데이트
+    var resultHtml = "";
+    for (var key in selectedItems) {
+        if (selectedItems[key].quantity > 0) { // 수량이 0보다 큰 아이템만 표시
+            resultHtml += `
+                <hr style="margin-top: 50px; margin-bottom:50px;">
+                <div class="d-flex justify-content-between">
+                    <div style="font-size:18px;">${key}</div>
+                    <div class="d-flex align-items-center">
+                        <div class="ms-3">
+                            <input type="number" class="form-control" id="quantity_${key}" placeholder="수량" value="${selectedItems[key].quantity}" min="1" onchange="updateTotal(this.value, '${key}')">
+                        </div>
+                    </div>
+                    <div style="font-size:18px;">${selectedItems[key].totalPrice.toLocaleString()}원</div>
+                    <button class="btn x_button" onclick="removeItem('${key}')"><i class="bi bi-x-lg"></i></button>
+                </div>
+            `;
+        }
+    }
+
+    document.getElementById("result").innerHTML = resultHtml;
+    updateTotalPriceDisplay();
+}
     </script>
 </body>
 </html>

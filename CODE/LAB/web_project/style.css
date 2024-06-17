@@ -117,6 +117,7 @@ footer {
 }
 
 
+.maincard,
 .wakcard {
     padding:30px;
     margin-top:50px;
@@ -149,11 +150,13 @@ footer {
     border: none;  /* 기본 테두리 제거 */
   }
 
+  .maincard,
   .wakcard {
     border-radius: 50%;
   }
 
-  .btn {
+  .btn,
+  #sub_youtube {
     transition: transform 0.3s ease-in-out;
   }
   
@@ -199,7 +202,7 @@ footer {
   }
 
   #cal {
-    margin-bottom:120px;
+    margin-bottom:1px;
     margin-top:50px;
   }
 
@@ -252,9 +255,9 @@ footer {
     width:1000px;
     height:650px;
     border-radius: 50px;
-    background-color: #C9C9C9;
     text-align: center; /* 내부 요소를 가운데 정렬 */
     margin: 0 auto; /* 가로 중앙 정렬 */
+    margin-bottom:600px;
 }
 
 #fes {
@@ -439,8 +442,108 @@ a {
     border: none;  /* 기본 테두리 제거 */
 }
 
-.address,
-.buying {
+.address {
     background-color: #47ACA5;
     color: white;
 }
+
+.fc-event {
+    border: none !important; /* Remove the border */
+}
+
+        .gomemcard-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .card {
+            border: none;
+        }
+
+
+        .gomem_cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .gomem_card {
+            flex: 0 1 calc(25% - 1rem); /* Adjust width to be 25% minus the gap */
+            box-sizing: border-box;
+            margin-bottom: 1rem; /* Add bottom margin for rows */
+        }
+
+        #nav .btn-toggle, #nav .nav-link, #nav .link {
+            font-size: 1rem; /* 원하는 크기로 설정 */
+        }
+
+        .wakcard {
+            transition: transform 0.3s ease;
+        }
+        
+        .wakcard:hover {
+            transform: scale(1.1);
+        }
+
+        .fc-prev-button, .fc-next-button, .fc-today-button {
+            background-color: #6DB69E !important; /* 원하는 색상으로 변경 */
+            color: white !important; /* 버튼 텍스트 색상 */
+            border: none !important; /* 테두리 제거 */
+            border-radius: 5px !important; /* 둥근 모서리 */
+        }
+
+        .fc-prev-button:hover, .fc-next-button:hover, .fc-today-button:hover {
+            background-color: #6DB69E !important; /* 호버 시 색상 변경 */
+            color: white !important;
+        }
+
+        /* 오늘 날짜 배경색 변경 */
+        .fc-day-today {
+            background-color: #e3f4ef !important; /* 원하는 색상으로 변경 */
+            color: white !important; /* 텍스트 색상 */
+        }
+
+        #sub_youtube {
+            border-radius: 50%;
+            width:50px;
+            margin-bottom:30px;
+            margin-top:30px;
+        }
+
+        .middle_main {
+            display: flex;
+            justify-content:flex-start;
+            
+        }
+
+        .middle_main > div {
+            text-align: center; /* 내부 요소 가운데 정렬 */
+            margin: 0 10px; /* 각 요소 사이의 간격 설정 */
+        }
+.song_card {
+    width:409px;
+}
+
+
+.song {
+    width:409px;
+    height: 230px;
+}
+
+.song_cards {
+    display: flex;
+    gap: 40px; /* 카드 사이의 간격 */
+    flex-wrap: wrap; /* 필요 시 줄 바꿈 */
+}
+
+
+.join-button {
+    font-size:20px;
+    background:linear-gradient(to right, #67B59F , #47ACA5);
+    color: whitesmoke;
+    border-style: none;
+    border-radius: 50px;
+    outline: none; /* 외곽선 제거 */
+    border: none;  /* 기본 테두리 제거 */
+  }

@@ -10,9 +10,38 @@
     <link href="sidebars.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <link href='fullcalendar/main.css' rel='stylesheet' />
+    <script type="text/javascript">
+        function getCookie(name) {
+            var cookie = document.cookie;
+            
+            if (document.cookie != "") {
+                var cookie_array = cookie.split("; ");
+                for ( var index in cookie_array) {
+                    var cookie_name = cookie_array[index].split("=");
+                    
+                    if (cookie_name[0] == "popupYN") {
+                        return cookie_name[1];
+                    }
+                }
+            }
+            return ;
+        }
+    
+        function openPopup(url) {
+            var cookieCheck = getCookie("popupYN");
+            if (cookieCheck != "N") {
+                var popupWidth = 450; // 팝업 창의 가로 크기
+                var popupHeight = 620; // 팝업 창의 세로 크기
+                var left = (window.innerWidth - popupWidth) / 2; // 화면 가로 중앙
+                var top = (window.innerHeight - popupHeight) / 2; // 화면 세로 중앙
+                window.open(url, '', 'width=' + popupWidth + ',height=' + popupHeight + ',left=' + left + ',top=' + top);
+            }
+        }
+    </script>
 </head>
 </head>
-<body>
+<body onload="javascript:openPopup('popup.html')">
+    
     <div id="body_content">
     <header class="container-fluid text-center">
         <p style="text-align: right; margin-right:100px; margin-top:5px;" class="login"><a href="login.html">LOGIN</a></p>
@@ -43,8 +72,8 @@
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="gomem.html" class="link rounded">고정멤버</a></li>
                         <li><a href="academy.html" class="link rounded">고정멤버 아카데미</a></li>
-                        <li><a href="academy.html" class="link rounded">고정멤버 노래</a></li>
-                        <li><a href="academy.html" class="link rounded">고정멤버 아카데미 노래</a></li>
+                        <li><a href="gomem_song.html" class="link rounded">고정멤버 노래</a></li>
+                        <li><a href="academy_song.html" class="link rounded">고정멤버 아카데미 노래</a></li>
                     </ul>
                     </div>
                 </li>
@@ -54,8 +83,8 @@
                     </button>
                     <div class="collapse show" id="orders-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" class="link rounded">멤버 소개</a></li>
-                        <li><a href="#" class="link rounded">노래</a></li>
+                        <li><a href="isd.html" class="link rounded">멤버 소개</a></li>
+                        <li><a href="isd_song.html" class="link rounded">노래</a></li>
                     </ul>
                     </div>
                 </li>
@@ -65,7 +94,7 @@
             <div id="right-content">  
                 <div class = "cards" id="cards">
                     <div id="card_one" class="card font-bol" style="width: 18rem; border:none;">
-                        <img src="img/cafe_logo.png" class="wakcard card-img-top" alt="...">
+                        <img src="img/cafe_logo.png" class="maincard card-img-top" alt="...">
                         <div class="card-body">
                         <h5 class="card-title color">왁물원</h5>
                         <p class="card-text">우왁굳의 팬카페</p>
@@ -73,15 +102,26 @@
                         </div>
                     </div>
                     <div id="card_one" class="card font-bol" style="width: 18rem; border:none;">
-                        <img src="img/youtube_logo.png" class="wakcard card-img-top" alt="...">
+                        <img src="img/youtube_logo.png" class="maincard card-img-top" alt="...">
                         <div class="card-body">
                         <h5 class="card-title color">유튜브</h5>
                         <p class="card-text">우왁굳의 유튜브 채널</p>
                         <a href="https://www.youtube.com/@woowakgood" class="btn btn-primary good-button" target="_blank">유튜브로 가기</a>
+                        <div class="middle_main">
+                            <div id = "subsub">
+                                <a href="https://www.youtube.com/@waktaverse" target="_blank"><img id="sub_youtube" src="img/wakta_youtubejpg.jpg"></a>
+                            </div>
+                            <div id = "subsub">
+                                <a href="https://www.youtube.com/@wakzero" target="_blank"><img id="sub_youtube" src="img/wakta_zero.jpg"></a>
+                            </div>
+                            <div id = "subsub">
+                                <a href="https://www.youtube.com/@wakbanchan" target="_blank"><img id="sub_youtube" src="img/wak_ban.jpg"></a>
+                            </div>
                         </div>
                     </div>
+                    </div>
                     <div id="card_one" class="card font-bol" style="width: 18rem; border:none;">
-                        <img src="img/africa_logo.png" class="wakcard card-img-top" alt="...">
+                        <img src="img/africa_logo.png" class="maincard card-img-top" alt="...">
                         <div class="card-body">
                         <h5 class="card-title color">아프리카TV</h5>
                         <p class="card-text">우왁굳의 방송국</p>
@@ -89,22 +129,15 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="bottom2">
                     <div id="cal">
-                        <div class="calendar-header">
+                        <div style="margin-top:100px; " class="calendar-header">
                             <h2>이번 달 일정&nbsp;<i class="bi bi-calendar-event"></i></h2>
                         </div>
                         <div id="calendar"></div>
                     </div>
-                <div id="event">
-                    <h2>행사 일정 및 위치</h2>
-                    <div class="d-flex align-items-center justify-content-center">
-                        <img id="fes" src="img/isd_festival.png" style="width: 35%; height: auto;"></img>
-                        <div id="daumRoughmapContainer1717176512357" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-                    </div>
-                    <p>이세계 페스티벌</p>
-                    <p>인천광역시 연수구 송도 달빛축제공원</p>
-                </div>
+
             </div>
             </div>
         </div>
@@ -126,9 +159,9 @@
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 // Tool Bar 목록 document : https://fullcalendar.io/docs/toolbar
                 headerToolbar: {
-                    left: 'prev,next today',
+                    left: 'prev,next',
                     center: 'title',
-                    right: ''
+                    right: 'today'
                 },
 
                 selectable: true,
@@ -136,6 +169,9 @@
 
                 navLinks: true, // can click day/week names to navigate views
                 editable: true,
+
+                
+
                 // Create new event
                 select: function (arg) {
                     Swal.fire({
@@ -208,60 +244,118 @@
                 // 이벤트 객체 필드 document : https://fullcalendar.io/docs/event-object
                 events: [
                     {
-                    title: 'All Day Event',
-                    start: '2024-06-01'
+                    title: '왁피스 스타팅 맵 만들기',
+                    start: '2024-06-01',
+                    backgroundColor:'#91A87F',
+                    textColor:'white'
                     },
                     {
-                    title: 'Long Event',
+                    groupId:999,
+                    title: '아카데미 합방',
+                    start: '2024-06-02T21:00:00',
+                    },
+                    {
+                    title: '아세토 맵 정하기',
+                    start: '2024-06-01',
+                    backgroundColor:'white',
+                    textColor:'#222222'
+                    },
+                    {
+                    title: 'VR챗 맵 탐방',
+                    start: '2024-06-01',
+                    backgroundColor:'white',
+                    textColor:'#222222'
+                    },
+                    {
+                    title: '[공포게임] 8번 승강장',
+                    start: '2024-06-02',
+                    backgroundColor:'white',
+                    textColor:'#222222'
+                    },
+                    {
+                    title: '작곡캠프 회의',
+                    start: '2024-06-03',
+                    backgroundColor:'white',
+                    textColor:'#222222'
+                    },
+                    {
+                    title: '[팬게임] 너와 나의 차가리',
+                    start: '2024-06-05',
+                    backgroundColor:'white',
+                    textColor:'#222222'
+                    },
+                    {
+                    title: '배틀그라운드 기습 버튜버 고민상담',
                     start: '2024-06-07',
-                    end: '2024-06-10'
+                    backgroundColor:'white',
+                    textColor:'#222222'
+                    },
+                    {
+                    title: '우왁굳의 꿈집 w.마이곰이',
+                    start: '2024-06-06',
+                    backgroundColor:'#91A87F',
+                    textColor:'white'
+                    },
+                    {
+                    title: '아세토 서킷 결승전',
+                    start: '2024-06-08',
+                    backgroundColor:'white',
+                    textColor:'#222222'
                     },
                     {
                     groupId: 999,
-                    title: 'Repeating Event',
-                    start: '2024-06-09T16:00:00'
+                    title: '고정멤버 & 아카데미 보물찾기',
+                    start: '2024-06-09T21:00:00'
                     },
                     {
-                    groupId: 999,
-                    title: 'Repeating Event',
-                    start: '2024-06-16T16:00:00'
-                    },
-                    {
-                    title: 'Conference',
+                    title: '컨텐츠 짜는 날',
                     start: '2024-06-11',
-                    end: '2024-06-13',
-                    backgroundColor:'red',
-                    textColor:'silver'
+                    backgroundColor:'white',
+                    textColor:'#222222'
                     },
                     {
-                    title: 'Meeting',
-                    start: '2024-06-12T10:30:00',
-                    end: '2024-06-12T12:30:00'
+                    title: '왁젠의 연애상담',
+                    start: '2024-06-12',
+                    backgroundColor:'white',
+                    textColor:'#222222'
                     },
                     {
-                    title: 'Lunch',
-                    start: '2024-06-12T12:00:00'
+                    groupId: 999,
+                    title: '고정멤버 합방 파니코어',
+                    start: '2024-06-13T21:00:00'
                     },
                     {
-                    title: 'Meeting',
-                    start: '2024-06-12T14:30:00'
+                    title: '마크 조공',
+                    start: '2024-06-16',
+                    backgroundColor:'#91A87F',
+                    textColor:'white'
                     },
                     {
-                    title: 'Happy Hour',
-                    start: '2024-06-12T17:30:00'
+                    groupId: 999,
+                    title: '아카데미 합방 VR챗 블랙아웃',
+                    start: '2024-06-17T21:00:00'
                     },
                     {
-                    title: 'Dinner',
-                    start: '2024-06-12T20:00:00'
+                    title: '배틀그라운드 2배 싸움',
+                    start: '2024-06-22',
+                    backgroundColor:'white',
+                    textColor:'#222222'
                     },
                     {
-                    title: 'Birthday Party',
-                    start: '2024-06-13T07:00:00'
+                    groupId: 999,
+                    title: '고정멤버 & 아카데미 고멤의 검색기록',
+                    start: '2024-06-23T21:00:00'
                     },
                     {
-                    title: 'Click for Google',
-                    url: 'http://google.com/',
-                    start: '2024-06-28'
+                    title: '아라포 왁두의 여름나기 알파 테스트',
+                    start: '2024-06-29',
+                    backgroundColor:'white',
+                    textColor:'#222222'
+                    },
+                    {
+                    groupId: 999,
+                    title: '작곡캠프 공개의 날',
+                    start: '2024-06-30T21:00:00'
                     }
                 ]
             });
@@ -270,16 +364,6 @@
         });
 
     </script>
-    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-
-    <!-- 3. 실행 스크립트 -->
-    <script charset="UTF-8">
-        new daum.roughmap.Lander({
-            "timestamp" : "1717176512357",
-            "key" : "2jigq",
-            "mapWidth" : "400",
-            "mapHeight" : "400"
-        }).render();
-    </script>
+    
 </body>
 </html>

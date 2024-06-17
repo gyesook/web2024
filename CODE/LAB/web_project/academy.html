@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAKTAVERSE</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="sidebars.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+</head>
+<body>
+    <div id="body_content">
+    <header class="container-fluid text-center">
+        <p style="text-align: right; margin-right:100px; margin-top:5px;" class="login"><a href="login.html">LOGIN</a></p>
+        <a href="waktaverse.html"><img src="img/top_header.png" width="200px" height="200px"></a>
+    </header>
+        <div class="d-flex">
+            <nav class="flex-shrink-0 p-3 bg-white" style="width: 280px;" id="nav">
+                <a href="waktaverse.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                <span class="fs-5 fw-semibold">WAKTAVERSE</span>
+                </a>
+                <ul class="list-unstyled ps-0">
+                <li class="mb-1">
+                    <div class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true"  aria-disabled="true">
+                    우왁굳
+                    </div>
+                    <div class="collapse show" id="home-collapse">
+                    <ul class="nav-pills btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="wak_info.html" class="link rounded">정보</a></li>
+                        <li><a href="goods.html" class="link rounded">굿즈</a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true" aria-disabled="true">
+                    고정멤버 & 아카데미
+                    </button>
+                    <div class="collapse show" id="dashboard-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="gomem.html" class="link rounded">고정멤버</a></li>
+                        <li><a href="academy.html" class="nav-link active link rounded">고정멤버 아카데미</a></li>
+                        <li><a href="gomem_song.html" class="link rounded">고정멤버 노래</a></li>
+                        <li><a href="academy_song.html" class="link rounded">고정멤버 아카데미 노래</a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="true" aria-disabled="true">
+                    이세계아이돌
+                    </button>
+                    <div class="collapse show" id="orders-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="isd.html" class="link rounded">멤버 소개</a></li>
+                        <li><a href="isd_song.html" class="link rounded">노래</a></li>
+                    </ul>
+                    </div>
+                </li>
+                </li>
+                </ul>
+            </nav> 
+            <div id="right-content"> 
+                <h1 style="font-size:45px; margin-top:30px; color:#222222; font-weight: bold;" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">우왁굳의 고정멤버 아카데미&nbsp;<i class="bi bi-caret-down-fill" style="font-size:50%"></i></h1> 
+                <div style="min-width: 120px;">
+                    <div class="collapse" id="collapseExample" >
+                        <div class="card card-body" style="width: auto; display: inline-block;">
+                        <p style="font-size:20px;">아프리카TV BJ 우왁굳의 세계관인 왁타버스에 속한 고정 멤버 그룹이다. 초기에는 고정 멤버에 들어갈 시청자들을 육성하기 위해 만들어진 산하 학원이었지만, 7차 고멤 오디션 이후로는 <span style="background-color: #d2f4ea; color:#568f7c;">기존의 고멤과는 다른 세계관(멀티버스)에서 활동하고 있다는 설정</span>으로 변경되었다.</p>
+                        <p><span class="highlight">인원</span> | 17명</p>
+                        <p id="launch-info"><span class="highlight">런칭일</span> | 2022년 12월 1일</p>
+                        <p><span class="highlight">소속</span> | 왁타버스</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gomem_cards" id="gomem_cards">
+                    <div id="gomem_card" class="card font-bol" style="width: 16rem;">
+                        <a href="ninnin.html">
+                            <img src="img/academy_img/ninnin.webp" class="wakcard card-img-top" alt="...">
+                        </a>
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">닌닌</h4>
+                            <p class="card-text" style="color:#222222;">1기</p>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 16rem;">
+                        <img src="img/academy_img/gom.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">불곰</h4>
+                            <p class="card-text" style="color:#222222;">1기</p>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 16rem;">
+                        <img src="img/academy_img/serian.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">시리안 레인</h4>
+                            <p class="card-text" style="color:#222222;">1기</p>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 16rem;">
+                        <img src="img/academy_img/choi.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">아마데우스최</h4>
+                            <p class="card-text" style="color:#222222;">1기</p>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 16rem;">
+                        <img src="img/academy_img/jin.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">진희</h4>
+                            <p class="card-text" style="color:#222222;">1기</p>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 16rem;">
+                        <img src="img/academy_img/captain.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">캡틴 설리반</h4>
+                            <p class="card-text" style="color:#222222;">1기</p>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 16rem;">
+                        <img src="img/academy_img/love.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">사랑전도사 젠투</h4>
+                            <p class="card-text" style="color:#222222;">2기</p>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 16rem;">
+                        <img src="img/academy_img/susemi.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">수셈이</h4>
+                            <p class="card-text" style="color:#222222;">2기</p>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 16rem;">
+                        <img src="img/academy_img/train.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">철도왕 길버트</h4>
+                            <p class="card-text" style="color:#222222;">2기</p>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 16rem;">
+                        <img src="img/academy_img/yong.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">미미짱짱세용</h4>
+                            <p class="card-text" style="color:#222222;">3기</p>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 16rem;">
+                        <img src="img/academy_img/victory.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">빅토리</h4>
+                            <p class="card-text" style="color:#222222;">3기</p>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 16rem;">
+                        <img src="img/academy_img/roki.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">데스해머 쵸로키</h4>
+                            <p class="card-text" style="color:#222222;">4기</p>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 16rem;">
+                        <img src="img/academy_img/ice.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">아이쓰께끼</h4>
+                            <p class="card-text" style="color:#222222;">4기</p>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 16rem;">
+                        <img src="img/academy_img/stone.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">크리즈</h4>
+                            <p class="card-text" style="color:#222222;">4기</p>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 16rem;">
+                        <img src="img/academy_img/3se.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">버터우스 3세</h4>
+                            <p class="card-text" style="color:#222222;">5기</p>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 16rem;">
+                        <img src="img/academy_img/sung.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">성기사 샬롯</h4>
+                            <p class="card-text" style="color:#222222;">5기</p>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 16rem;">
+                        <img src="img/academy_img/gisan.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">메카 맹기산</h4>
+                            <p class="card-text" style="color:#222222;">6기</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+        <footer>
+            <div id="foot">
+                <ul>
+                    <li>서울특별시 용산구 청파로47길 100</li>
+                    <li>숙명여자대학교 컴퓨터과학전공 2314317 김계림</li>
+                    <li>TEL | 010-2388-8057&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EMAIL | gyerim@sookmyung.ac.kr</li>
+                </ul>
+            </div>
+        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function() {
+            // 런칭일 설정
+            const launchDate = new Date('2022-12-01');
+            const currentDate = new Date();
+            
+            // 경과일 계산
+            const timeDifference = currentDate - launchDate;
+            const daysElapsed = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            
+            // 주년 계산
+            const yearsElapsed = currentDate.getFullYear() - launchDate.getFullYear();
+            const isAnniversaryPassed = (currentDate.getMonth() > launchDate.getMonth()) || 
+                                        (currentDate.getMonth() === launchDate.getMonth() && currentDate.getDate() >= launchDate.getDate());
+            const anniversary = isAnniversaryPassed ? yearsElapsed : yearsElapsed - 1;
+            
+            // 결과 표시
+            document.getElementById('launch-info').innerHTML = `<span class='highlight'>런칭일</span> | 2022년 12월 1일 <span style="font-size:15px;">(+${daysElapsed}일, ${anniversary}주년)</span>`;
+        };
+    </script>
+</body>
+</html>

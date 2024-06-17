@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>ISEGYE FESTIVAL</title>
+<script language="JavaScript">
+    function setCookie(name, value, expiredays) {
+        var date = new Date();
+        date.setDate(date.getDate() + expiredays);
+        document.cookie = escape(name) + "=" + escape(value) + "; expires=" + date.toUTCString();
+    }
+
+    function closePopup() {
+        if (document.getElementById("check").value) {
+            setCookie("popupYN", "N", 1);
+            self.close();
+        }
+    }
+</script>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div style="position: relative;">
+        <a href="festival.html" target="_blank">
+            <img src="img/isd_festival.png" width="450px">
+        </a>
+        <div style="position: absolute; top: 0; right: 0;">
+            <input type="checkbox" id="check" onclick="closePopup();">
+            <label for="check" style="font-size:16px;">24시간 동안 안 보기</label>
+        </div>
+    </div>
+</body>
+</html>

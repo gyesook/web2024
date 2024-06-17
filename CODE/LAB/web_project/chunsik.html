@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WAKTAVERSE</title>
+        <link rel="icon" href="favicon.ico">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+        <link href="sidebars.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+    </head>
+<body>
+    <div id="body_content">
+    <header class="container-fluid text-center">
+        <p style="text-align: right; margin-right:100px; margin-top:5px;" class="login"><a href="login.html">LOGIN</a></p>
+        <a href="waktaverse.html"><img src="img/top_header.png" width="200px" height="200px"></a>
+    </header>
+        <div class="d-flex">
+            <nav class="flex-shrink-0 p-3 bg-white" style="width: 280px;" id="nav">
+                <a href="waktaverse.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                <span class="fs-5 fw-semibold">WAKTAVERSE</span>
+                </a>
+                <ul class="list-unstyled ps-0">
+                <li class="mb-1">
+                    <div class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true"  aria-disabled="true">
+                    우왁굳
+                    </div>
+                    <div class="collapse show" id="home-collapse">
+                    <ul class="nav-pills btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="wak_info.html" class="link rounded">정보</a></li>
+                        <li><a href="goods.html" class="link rounded">굿즈</a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true" aria-disabled="true">
+                    고정멤버 & 아카데미
+                    </button>
+                    <div class="collapse show" id="dashboard-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="gomem.html" class="nav-link active link rounded">고정멤버</a></li>
+                        <li><a href="academy.html" class="link rounded">고정멤버 아카데미</a></li>
+                        <li><a href="gomem_song.html" class="link rounded">고정멤버 노래</a></li>
+                        <li><a href="academy_song.html" class="link rounded">고정멤버 아카데미 노래</a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="true" aria-disabled="true">
+                    이세계아이돌
+                    </button>
+                    <div class="collapse show" id="orders-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="isd.html" class="link rounded">멤버 소개</a></li>
+                        <li><a href="isd_song.html" class="link rounded">노래</a></li>
+                    </ul>
+                    </div>
+                </li>
+                </li>
+                </ul>
+            </nav> 
+            <div id="right-content"> 
+                <h1 style="font-size:45px; margin-top:30px; color:#222222; font-weight: bold;">곽춘식<span style="font-size:25px; font-weight: lighter;">&nbsp;1기</span></span></h1> 
+                <div id="info">
+                    <img id="info_img" src="img/gomem_img/chun_detail.webp"></img>
+                    <div id="wak_infos">
+                        <p><span class="highlight">활동명</span> | 곽춘식</p>
+                        <p id="age-info"><span class="highlight">생년월일</span> | 2000년 10월 9일(23세)</p>
+                        <p><span class="highlight">MBTI</span> | INFJ</p>
+                        <p><span class="highlight">팬덤명</span> | 폐급단</p>
+                        <p><span class="highlight">소속</span> | 왁타버스 고정멤버</p>
+                        <p style="margin-bottom:110px;" id="launch-info"><span class="highlight">첫 방송일</span> | 2021년 5월 16일</p>
+                        <div id="sns">
+                            <hr style="height: 2px; background-color: #c3c3c3; border: none;">
+                            <a href="https://www.youtube.com/channel/UCL6FpO3TH3oF_RpPsezrR_Q" target="_blank"><img id= "info_go_button" src="img/youtube_logo2.png"></a>
+                            <a href="https://bj.afreecatv.com/kwakchunshik" target="_blank"><img id= "info_go_button" src="img/africa_logo.png"></a>
+                            <a href="https://www.instagram.com/real_chunsik/" target="_blank"><img id= "info_go_button" src="img/insta_logo.png"></a>
+                            <a href="https://x.com/chunshik1234" target="_blank"><img id= "info_go_button" src="img/x_logo.png"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <h1 style="font-size:45px; margin-top:30px; color:#222222; font-weight: bold;">참여한 고멤합방</h1> 
+
+                    <iframe width="450" height="253" class="youtube-video" src="https://www.youtube.com/embed/rzSyrx7WFac?si=6fHDDsO9pJYvUyid" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="450" height="253" class="youtube-video" src="https://www.youtube.com/embed/2MSCACkxCPQ?si=IWn57ddoDPWYfg_n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="450" height="253" class="youtube-video" src="https://www.youtube.com/embed/_D_uvG_4Ik4?si=4JJwQOgBSbTAi_d4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+            </div>
+            
+    </div>            
+        <footer>
+            <div id="foot">
+                <ul>
+                    <li>서울특별시 용산구 청파로47길 100</li>
+                    <li>숙명여자대학교 컴퓨터과학전공 2314317 김계림</li>
+                    <li>TEL | 010-2388-8057&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EMAIL | gyerim@sookmyung.ac.kr</li>
+                </ul>
+            </div>
+        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function() {
+            // 런칭일 설정
+            const launchDate = new Date('2021-05-16');
+            const currentDate = new Date();
+            
+            // 경과일 계산
+            const timeDifference = currentDate - launchDate;
+            const daysElapsed = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            
+            // 주년 계산
+            const yearsElapsed = currentDate.getFullYear() - launchDate.getFullYear();
+            const isAnniversaryPassed = (currentDate.getMonth() > launchDate.getMonth()) || 
+                                        (currentDate.getMonth() === launchDate.getMonth() && currentDate.getDate() >= launchDate.getDate());
+            const anniversary = isAnniversaryPassed ? yearsElapsed : yearsElapsed - 1;
+            
+            // 결과 표시
+            document.getElementById('launch-info').innerHTML = `<span class='highlight'>첫 방송일</span> | 2021년 5월 16일 <span style="font-size:15px;">(+${daysElapsed}일, ${anniversary}주년)</span>`;
+            
+            // 출생일 설정 및 나이 계산
+            const birthDate = new Date('2000-10-09');
+            const birthYearsElapsed = currentDate.getFullYear() - birthDate.getFullYear();
+            const isBirthdayPassed = (currentDate.getMonth() > birthDate.getMonth()) || 
+                                     (currentDate.getMonth() === birthDate.getMonth() && currentDate.getDate() >= birthDate.getDate());
+            const age = isBirthdayPassed ? birthYearsElapsed : birthYearsElapsed - 1;
+    
+            // 나이 결과 표시
+            document.getElementById('age-info').innerHTML = `<span class='highlight'>생년월일</span> | 2000년 10월 9일 <span style="font-size:15px;">(${age}세)</span>`;
+        };
+
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.swiper', {
+        slidesPerView: 3,
+        direction: getDirection(),
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        on: {
+          resize: function () {
+            swiper.changeDirection(getDirection());
+          },
+        },
+      });
+  
+      function getDirection() {
+        var windowWidth = window.innerWidth;
+        var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+  
+        return direction;
+      }
+    </script>
+</body>
+</html>

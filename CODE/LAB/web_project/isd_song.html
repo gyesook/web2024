@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAKTAVERSE</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="sidebars.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        
+        .album {
+    position: relative; /* Ensure cards are in normal document flow */
+    overflow: hidden; /* Keep content inside card */
+    transition: transform 0.5s; /* Smooth hover transition */
+
+    /* Adjust height or aspect ratio as needed */
+    height: auto; /* Or specific height if needed */
+    padding-top: 38%; /* 16:9 aspect ratio (for example) */
+
+    /* Additional styles for background and layout */
+    background-size: cover;
+    background-position: center;
+}
+
+.album .content {
+    position: relative;
+    top: 50%; /* Position content in the middle */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    opacity: 0; /* Hide content by default */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.album:hover .content {
+    opacity: 1; /* Show content on hover */
+}
+
+        .album:nth-child(1) .content {
+            background: linear-gradient(to top, #222222, transparent);
+        }
+
+
+        .album:hover {
+            transform: translateY(-20px);
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="body_content">
+    <header class="container-fluid text-center">
+        <p style="text-align: right; margin-right:100px; margin-top:5px;" class="login"><a href="login.html">LOGIN</a></p>
+        <a href="waktaverse.html"><img src="img/top_header.png" width="200px" height="200px"></a>
+    </header>
+        <div class="d-flex">
+            <nav class="flex-shrink-0 p-3 bg-white" style="width: 280px;" id="nav">
+                <a href="waktaverse.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                <span class="fs-5 fw-semibold">WAKTAVERSE</span>
+                </a>
+                <ul class="list-unstyled ps-0">
+                <li class="mb-1">
+                    <div class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true"  aria-disabled="true">
+                    우왁굳
+                    </div>
+                    <div class="collapse show" id="home-collapse">
+                    <ul class="nav-pills btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="wak_info.html" class="link rounded">정보</a></li>
+                        <li><a href="goods.html" class="link rounded">굿즈</a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true" aria-disabled="true">
+                    고정멤버 & 아카데미
+                    </button>
+                    <div class="collapse show" id="dashboard-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="gomem.html" class="link rounded">고정멤버</a></li>
+                        <li><a href="academy.html" class="link rounded">고정멤버 아카데미</a></li>
+                        <li><a href="gomem_song.html" class="link rounded">고정멤버 노래</a></li>
+                        <li><a href="academy_song.html" class="link rounded">고정멤버 아카데미 노래</a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="true" aria-disabled="true">
+                    이세계아이돌
+                    </button>
+                    <div class="collapse show" id="orders-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="isd.html" class="link rounded">멤버 소개</a></li>
+                        <li><a href="isd_song.html" class="nav-link active link rounded">노래</a></li>
+                    </ul>
+                    </div>
+                </li>
+                </li>
+                </ul>
+            </nav> 
+            <div id="right-content">
+                <div class="d-flex justify-content-center">
+                    <img src="img/2sedol.png" style="width:30%; margin-top:0px;" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                </div> 
+                <div class="container px-4 py-5" style="width:auto;" id="custom-cards">
+                    <h2 class="pb-2 border-bottom" style="font-size:45px; margin-top:0px; color:#222222; font-weight: bold;">단체 오리지널 곡</h2>
+                
+                    <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
+                        <div class="col">
+                            <div class="album card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/isd_img/rewind.webp'); background-size: cover;">
+                                <div class="content d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">RE : WIND</h3>
+                                    <ul class="d-flex text-center mt-auto mb-0">
+                                        <li class="sns d-flex align-items-center me-3">
+                                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                                            <a href="https://youtu.be/JY-gJkMuJ94?si=91ACZS9-YjvQBHfG" target="_blank" class="text-white">들으러 가기</a>
+                                        </li>
+                                        <li class="d-flex align-items-center me-3">
+                                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                                            <small>2021.12.17.</small>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col">
+                            <div class="album card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/isd_img/winter.webp'); background-size: cover;">
+                                <div class="content d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">겨울봄</h3>
+                                    <ul class="d-flex text-center mt-auto mb-0">
+                                        <li class="sns d-flex align-items-center me-3">
+                                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                                            <a href="https://youtu.be/JY-gJkMuJ94?si=91ACZS9-YjvQBHfG" target="_blank" class="text-white">들으러 가기</a>
+                                        </li>
+                                        <li class="d-flex align-items-center me-3">
+                                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                                            <small>2022.03.11.</small>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col">
+                            <div class="album card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/isd_img/kidding.webp'); background-size: cover;">
+                                <div class="content d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">KIDDING</h3>
+                                    <ul class="d-flex text-center mt-auto mb-0">
+                                        <li class="d-flex align-items-center">
+                                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                                            <a href="https://youtu.be/rDFUl2mHIW4?si=JeBgvDE4SyhSeeGn" target="_blank" class="text-white">들으러 가기</a>
+                                        </li>
+                                        <li class="d-flex align-items-center me-3">
+                                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                                            <small>2023.08.18.</small>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <h2 class="pb-2 border-bottom" style="font-size:45px; margin-top:30px; margin-bottom:30px; color:#222222; font-weight: bold;">단체 커버 곡</h2>
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="song_card card">
+                                <iframe width="409" height="230" src="https://www.youtube.com/embed/OrFyzG5yTC4?si=EGrYIFJ0O5mAADXa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-weight: bold;">Kissing You - 이세계아이돌</h5>
+                                    <p class="card-text">2024년 3월 20일</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col">
+                            <div class="song_card card">
+                                <iframe width="409" height="230" src="https://www.youtube.com/embed/Brf3LWwNVTk?si=IYhbRK6nDwk80sCy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-weight: bold;">LOVE DIVE - 이세계아이돌</h5>
+                                    <p class="card-text">2022년 9월 5일</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col">
+                            <div class="song_card card">
+                                <iframe width="409" height="230" src="https://www.youtube.com/embed/21trg6DfzX8?si=i09PSjA2pjNFu2gf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-weight: bold;">풍선 - 이세계아이돌</h5>
+                                    <p class="card-text">2022년 8월 28일</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="pb-2 border-bottom" style="font-size:45px; margin-top:30px; margin-bottom:30px; color:#222222; font-weight: bold;">멤버별 노래 들으러 가기</h2>
+                        
+                        <div class="gomem_cards" id="gomem_cards">
+                            <div id="gomem_card" class="card font-bol" style="width: 20rem;">
+                                <a href="ine_song.html">
+                                    <img src="img/isd_img/ine.webp" class="wakcard card-img-top" alt="...">
+                                </a>
+                                <div class="gomemcard-body card-body">
+                                    <h4 class="card-title" style="color:#222222; font-weight: bold;">아이네</h4>
+                                </div>
+                            </div>
+                            <div id="gomem_card" class="card font-bol" style="width: 20rem;">
+                                <img src="img/isd_img/burger.webp" class="wakcard card-img-top" alt="...">
+                                <div class="gomemcard-body card-body">
+                                    <h4 class="card-title" style="color:#222222; font-weight: bold;">징버거</h4>
+                                </div>
+                            </div>
+                            <div id="gomem_card" class="card font-bol" style="width: 20rem;">
+                                <img src="img/isd_img/rilpa.webp" class="wakcard card-img-top" alt="...">
+                                <div class="gomemcard-body card-body">
+                                    <h4 class="card-title" style="color:#222222; font-weight: bold;">릴파</h4>
+                                </div>
+                            </div>
+                            <div id="gomem_card" class="card font-bol" style="width: 20rem;">
+                                <img src="img/isd_img/jururu.webp" class="wakcard card-img-top" alt="...">
+                                <div class="gomemcard-body card-body">
+                                    <h4 class="card-title" style="color:#222222; font-weight: bold;">주르르</h4>
+                                </div>
+                            </div>
+                            <div id="gomem_card" class="card font-bol" style="width: 20rem;">
+                                <img src="img/isd_img/gosegu.webp" class="wakcard card-img-top" alt="...">
+                                <div class="gomemcard-body card-body">
+                                    <h4 class="card-title" style="color:#222222; font-weight: bold;">고세구</h4>
+                                </div>
+                            </div>
+                            <div id="gomem_card" class="card font-bol" style="width: 20rem;">
+                                <img src="img/isd_img/viichan.webp" class="wakcard card-img-top" alt="...">
+                                <div class="gomemcard-body card-body">
+                                    <h4 class="card-title" style="color:#222222; font-weight: bold;">비챤</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+        <footer>
+            <div id="foot">
+                <ul>
+                    <li>서울특별시 용산구 청파로47길 100</li>
+                    <li>숙명여자대학교 컴퓨터과학전공 2314317 김계림</li>
+                    <li>TEL | 010-2388-8057&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EMAIL | gyerim@sookmyung.ac.kr</li>
+                </ul>
+            </div>
+        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

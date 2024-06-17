@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAKTAVERSE</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="sidebars.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+</head>
+<body>
+    <div id="body_content">
+    <header class="container-fluid text-center">
+        <p style="text-align: right; margin-right:100px; margin-top:5px;" class="login"><a href="login.html">LOGIN</a></p>
+        <a href="waktaverse.html"><img src="img/top_header.png" width="200px" height="200px"></a>
+    </header>
+        <div class="d-flex">
+            <nav class="flex-shrink-0 p-3 bg-white" style="width: 280px;" id="nav">
+                <a href="waktaverse.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                <span class="fs-5 fw-semibold">WAKTAVERSE</span>
+                </a>
+                <ul class="list-unstyled ps-0">
+                <li class="mb-1">
+                    <div class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true"  aria-disabled="true">
+                    우왁굳
+                    </div>
+                    <div class="collapse show" id="home-collapse">
+                    <ul class="nav-pills btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="wak_info.html" class="link rounded">정보</a></li>
+                        <li><a href="goods.html" class="link rounded">굿즈</a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true" aria-disabled="true">
+                    고정멤버 & 아카데미
+                    </button>
+                    <div class="collapse show" id="dashboard-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="gomem.html" class="link rounded">고정멤버</a></li>
+                        <li><a href="academy.html" class="link rounded">고정멤버 아카데미</a></li>
+                        <li><a href="gomem_song.html" class="link rounded">고정멤버 노래</a></li>
+                        <li><a href="academy_song.html" class="link rounded">고정멤버 아카데미 노래</a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="true" aria-disabled="true">
+                    이세계아이돌
+                    </button>
+                    <div class="collapse show" id="orders-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="isd.html" class="nav-link active link rounded">멤버 소개</a></li>
+                        <li><a href="isd_song.html" class="link rounded">노래</a></li>
+                    </ul>
+                    </div>
+                </li>
+                </li>
+                </ul>
+            </nav> 
+            <div id="right-content"> 
+                <div class="d-flex justify-content-center">
+                    <img src="img/2sedol.png" style="width:30%; margin-top:0px;" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                </div>
+                <div style="min-width: 120px;">
+                    <div class="collapse" id="collapseExample" >
+                        <div class="card card-body" style="width: auto; display: inline-block;">
+                        <p style="font-size:20px;">인터넷 방송인 우왁굳이 기획한 오디션을 통해 결성되어, 2021년 12월 17일에 데뷔한 왁 엔터테인먼트 소속의 <span style="background-color: #FBE0DC; color:#F15D7D;">6인조 버츄얼 걸그룹</span></p>
+                        <p><span style="color:#F15D7D;">인원</span> | 6명</p>
+                        <p id="launch-info"><span style="color:#F15D7D;">런칭일</span> | 2021년 5월 16일</p>
+                        <p><span style="color:#F15D7D;">소속</span> | 왁 엔터테인먼트</p>
+                        <p><span style="color:#F15D7D;">팬덤명</span> | 이파리</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gomem_cards" id="gomem_cards">
+                    <div id="gomem_card" class="card font-bol" style="width: 20rem;">
+                        <a href="ine.html">
+                            <img src="img/isd_img/ine.webp" class="wakcard card-img-top" alt="...">
+                        </a>
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">아이네</h4>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 20rem;">
+                        <img src="img/isd_img/burger.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">징버거</h4>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 20rem;">
+                        <img src="img/isd_img/rilpa.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">릴파</h4>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 20rem;">
+                        <img src="img/isd_img/jururu.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">주르르</h4>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 20rem;">
+                        <img src="img/isd_img/gosegu.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">고세구</h4>
+                        </div>
+                    </div>
+                    <div id="gomem_card" class="card font-bol" style="width: 20rem;">
+                        <img src="img/isd_img/viichan.webp" class="wakcard card-img-top" alt="...">
+                        <div class="gomemcard-body card-body">
+                            <h4 class="card-title" style="color:#222222; font-weight: bold;">비챤</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+        <footer>
+            <div id="foot">
+                <ul>
+                    <li>서울특별시 용산구 청파로47길 100</li>
+                    <li>숙명여자대학교 컴퓨터과학전공 2314317 김계림</li>
+                    <li>TEL | 010-2388-8057&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EMAIL | gyerim@sookmyung.ac.kr</li>
+                </ul>
+            </div>
+        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function() {
+            // 런칭일 설정
+            const launchDate = new Date('2021-12-17');
+            const currentDate = new Date();
+            
+            // 경과일 계산
+            const timeDifference = currentDate - launchDate;
+            const daysElapsed = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            
+            // 주년 계산
+            const yearsElapsed = currentDate.getFullYear() - launchDate.getFullYear();
+            const isAnniversaryPassed = (currentDate.getMonth() > launchDate.getMonth()) || 
+                                        (currentDate.getMonth() === launchDate.getMonth() && currentDate.getDate() >= launchDate.getDate());
+            const anniversary = isAnniversaryPassed ? yearsElapsed : yearsElapsed - 1;
+            
+            // 결과 표시
+            document.getElementById('launch-info').innerHTML = `<span style="color:#F15D7D;">데뷔일</span> | 2021년 12월 17일 <span style="font-size:15px;">(+${daysElapsed}일, ${anniversary}주년)</span>`;
+        };
+    </script>
+</body>
+</html>
