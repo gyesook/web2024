@@ -10,14 +10,84 @@
     
     <link href="sidebars.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <script>
+      function getCookie(name) {
+          var cookie = document.cookie;
+          if (cookie != "") {
+              var cookie_array = cookie.split("; ");
+              for (var index in cookie_array) {
+                  var cookie_name = cookie_array[index].split("=");
+                  if (cookie_name[0] == name) {
+                      return cookie_name[1];
+                  }
+              }
+          }
+          return;
+      }
+  
+      function setCookie(name, value, days) {
+          var expires = "";
+          if (days) {
+              var date = new Date();
+              date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+              expires = "; expires=" + date.toUTCString();
+          }
+          document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      }
+  
+      function logout() {
+          setCookie("isLoggedIn", "false", -1); // Expire the isLoggedIn cookie
+          setCookie("userId", "", -1); // Expire the userId cookie or any other user-specific data
+  
+          // Update UI after logout
+          updateUI();
+      }
+  
+      function checkLogin() {
+          var isLoggedIn = getCookie("isLoggedIn");
+          var loginLink = document.querySelector(".login a");
+          var userIdDisplay = document.querySelector(".user-id-display");
+  
+          if (isLoggedIn && isLoggedIn  === "true") {
+              var userId = getCookie("userId"); // Assuming you store userId in a cookie
+              if (userId) {
+                  userIdDisplay.textContent = userId + " 님\u00A0\u00A0\u00A0"; // Display user ID with greeting next to logout button
+                  userIdDisplay.style.color = "#47ACA5"; // Set text color
+                  userIdDisplay.style.fontSize = "17px"; // Set font size
+              }
+              loginLink.textContent = "LOGOUT";
+              loginLink.onclick = logout; // Attach logout function to the onclick event of logout link
+          } else {
+              loginLink.textContent = "LOGIN";
+              loginLink.href = "login.html"; // Link to login page if not logged in
+              userIdDisplay.textContent = ""; // Clear user ID display if not logged in
+          }
+      }
+  
+      function updateUI() {
+          var loginLink = document.querySelector(".login a");
+          var userIdDisplay = document.querySelector(".user-id-display");
+  
+          loginLink.textContent = "LOGIN";
+          userIdDisplay.textContent = ""; // Clear user ID display
+      }
+  
+      // Check login status on page load
+      window.onload = function() {
+          checkLogin();
+      };
+  </script>
+  
 </head>
-</head>
-<body>
-    <div id="body_content">
-    <header class="container-fluid text-center">
-        <p style="text-align: right; margin-right:100px; margin-top:5px;" class="login"><a href="login.html">LOGIN</a></p>
-        <a href="waktaverse.html"><img src="img/top_header.png" width="200px" height="200px"></a>
-    </header>
+<body onload="checkLogin()">
+  <div id="body_content">
+      <header class="container-fluid text-center">
+          <p style="text-align: right; margin-right:100px; margin-top:5px;" class="login">
+              <span class="user-id-display"></span>
+              <a href="#" onclick="logout()">LOGOUT</a>
+          </p>
+      <a href="waktaverse.html"><img src="img/top_header.png" width="200px" height="200px"></a>
+  </header>
         <div class="d-flex">
             <nav class="flex-shrink-0 p-3 bg-white" style="width: 280px;" id="nav">
                 <a href="waktaverse.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
