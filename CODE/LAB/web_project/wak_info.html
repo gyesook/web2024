@@ -76,7 +76,19 @@
             checkLogin();
         };
     </script>
-    
+        <style>
+            /* 이미지 크기 조정 */
+            .carousel-inner img {
+                height: auto;
+                max-height: 500px; /* 이미지 최대 높이를 300px로 설정 */
+                object-fit: cover; /* 이미지 비율을 유지하며 컨테이너에 맞게 조정 */
+            }
+            /* 캐러셀 하단 바 숨김 */
+            .carousel-indicators,
+            .carousel-caption {
+                display: none;
+            }
+        </style>
 </head>
 <body onload="checkLogin()">
     <div id="body_content">
@@ -151,7 +163,36 @@
                             <a href="https://x.com/jinjjawakgood" target="_blank"><img id= "info_go_button" src="img/x_logo.png"></a>
                         </div>
                     </div>
+                    
                 </div>
+                <h1 style="font-size:45px; margin-top:30px; color:#222222; font-weight: bold;">우왁굳의 유행어</h1> 
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" style="width:auto; height: 500px;">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="img/ddak.PNG" class="d-block w-100" alt="..." style="width:300px; height:auto;">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img src="img/legeno.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
             </div>
     </div>
         <footer>
